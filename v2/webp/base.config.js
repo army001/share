@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'source-map',
   entry,
   output,
-  plugins: plugins(),
+  plugins,
   module: modules,
   resolve,
   node: { __filename: true, __dirname: true }

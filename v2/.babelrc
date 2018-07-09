@@ -1,0 +1,11 @@
+{
+  "presets": ["es2017-node7", "react"],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    ["module-resolver", {
+      "root": ["./src/electron-render"],
+      "alias": {}
+    }]
+  ]
+}
