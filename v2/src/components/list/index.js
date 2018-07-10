@@ -12,14 +12,23 @@ export default class extends Component {
 
   }
 
+  onDoneBtnClick = (e) => {
+    const index = e.target.getAttribute('data-index');
+    this.props.onDone(index);
+  }
+
   render() {
     const { list } = this.props;
-    console.log(list)
     return (
       <ul id="list" className="list">
         {
           list.map((item, index) => {
-            return <div key={index}>{item}</div>
+            return (
+              <li key={index}>
+                {index + 1}. {item}
+                <button data-index={index} onClick={this.onDoneBtnClick}>-</button>
+              </li>
+            );
           })
         }
       </ul>

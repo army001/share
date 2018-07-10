@@ -19,20 +19,16 @@ class Todo extends Component {
   componentWillUnmount() {
   }
 
-  shouldComponentUpdate() {
-  }
-
   componentDidCatch() {
   }
 
   render() {
-    const { list, newItem } = this.props;
-    console.log('todo list::', list);
+    const { list, newItem, doneItem } = this.props;
     return (
       <div>
         <Title title="Todo App"></Title>
         <Input onNew={newItem}/>
-        <List list={list}/>
+        <List list={list} onDone={doneItem}/>
       </div>
     )
   }
